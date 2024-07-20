@@ -9,7 +9,7 @@ clang() {
     rm -rf clang
     echo "Cloning clang"
     if [ ! -d "clang" ]; then
-        git clone https://gitlab.com/nekoprjkt/aosp-clang -b 17 --depth=1 clang
+        git clone https://gitlab.com/Panchajanya1999/azure-clang --depth=1 clang
         PATH="${PWD}/clang/bin:${PATH}"
     fi
     sudo apt install -y ccache
@@ -30,7 +30,7 @@ CODENAME="ysl"
 export CODENAME
 KERNELNAME="ReallySnow"
 export KERNELNAME
-VERSION="v1.0"
+VERSION="v1.5"
 export VERSION
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
@@ -38,7 +38,7 @@ PROCS=$(nproc --all)
 export PROCS
 source "${HOME}"/.bashrc && source "${HOME}"/.profile
 if [ $CACHE = 1 ]; then
-    ccache -M 100G
+    ccache -M 50G
     export USE_CCACHE=1
 fi
 LC_ALL=C
