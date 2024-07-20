@@ -18,7 +18,6 @@ env:
   DEVICE: ${{ github.event.inputs.device }}
   REPO: ${{ github.event.inputs.repo }}
   BRANCH: ${{ github.event.inputs.branch }}
-  GKI: ${{ github.event.inputs.gki }}
   token: ${{ secrets.TELEGRAM_TOKEN }}
   chat_id: ${{ secrets.TELEGRAM_TO }}
 
